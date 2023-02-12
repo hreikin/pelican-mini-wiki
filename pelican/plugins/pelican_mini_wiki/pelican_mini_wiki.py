@@ -11,11 +11,10 @@ def check_settings(pelican):
     mini_wiki_path = pelican.settings.get("MINI_WIKI_PATH", "")
 
     if mini_wiki == True:
-        logger.debug("MiniWiki is enabled.")
-        if mini_wiki_path[-1] != "/":
-            logger.warning("MINI_WIKI_PATH does not end with a forward slash (/).")
-        else:
-            logger.debug(f"MINI_WIKI_PATH is '{mini_wiki_path}'.")
+        logger.debug("Mini Wiki is ENABLED.")
+        logger.debug(f"MINI_WIKI_PATH is '{mini_wiki_path}'.")
+    else:
+        logger.warning("Mini Wiki is DISABLED.")
 
 def set_wiki_template(generator, content):
     """
