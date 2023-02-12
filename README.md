@@ -1,11 +1,13 @@
 Pelican Mini Wiki: A Plugin for Pelican
 ====================================================
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/pelican-plugins/pelican-mini-wiki/main.yml?branch=main)](https://github.com/hreikin/pelican-mini-wiki/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/pelican-plugins/pelican-mini-wiki/build-and-publish-on-tagged-release.yml?branch=main)](https://github.com/hreikin/pelican-mini-wiki/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/pelican-mini-wiki)](https://pypi.org/project/pelican-mini-wiki/)
 ![License](https://img.shields.io/pypi/l/pelican-mini-wiki?color=blue)
 
-Add a minimal wiki to any Pelican theme.
+Pelican Mini Wiki allows you to add a minimal wiki to any Pelican theme and website.
+
+> **NOTE:** still under development, will not currently work or be useful.
 
 Installation
 ------------
@@ -17,7 +19,7 @@ This plugin can be installed via:
 Usage
 -----
 
-<<Add plugin details here>>
+Instructions coming soon.
 
 Contributing
 ------------
