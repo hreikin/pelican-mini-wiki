@@ -17,6 +17,19 @@ def check_settings(pelican):
         else:
             logger.debug(f"MINI_WIKI_PATH is '{mini_wiki_path}'.")
 
+def set_wiki_template(generator, content):
+    """
+    Ensure that `content` of a wiki page has a valid template attribute
+    set before being written by the pelican writer.
+
+    Check the path of the page, pages that are under the wiki directory
+    will have the template meta attribute set to the `wiki_base.html`
+    template unless it is already set in the meta to a different file.
+    """
+    page_path = content.metadata.get('path')
+    logger.debug(page_path)
+
+
 def register():
     """Register the plugin with Pelican"""
     signals.initialized.connect(check_settings)
