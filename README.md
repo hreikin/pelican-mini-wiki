@@ -1,7 +1,7 @@
 Pelican Mini Wiki: A Plugin for Pelican
 ====================================================
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/pelican-plugins/pelican-mini-wiki/build-and-publish-on-tagged-release.yml?branch=main)](https://github.com/hreikin/pelican-mini-wiki/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/hreikin/pelican-mini-wiki/build-and-publish-on-tagged-release.yml?branch=main)](https://github.com/hreikin/pelican-mini-wiki/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/pelican-mini-wiki)](https://pypi.org/project/pelican-mini-wiki/)
 ![License](https://img.shields.io/pypi/l/pelican-mini-wiki?color=blue)
 
