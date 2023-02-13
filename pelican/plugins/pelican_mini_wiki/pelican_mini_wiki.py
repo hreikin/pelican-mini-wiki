@@ -27,7 +27,6 @@ def set_wiki_template(generator, content):
     """
     wiki_template = "wiki_base"
     page_relative_path = str(content.relative_source_path).split("/")
-    print(str(content))
 
     for i in page_relative_path:
         if i == "wiki":
