@@ -26,12 +26,15 @@ def set_wiki_template(generator, content):
     will have the template meta attribute set to the `wiki_base.html`
     template unless it is already set in the meta to a different file.
     """
+    # Reset `content.template` back to the default value for pages to ensure the wiki template is only applied to wiki pages.
+    content.template = "page"
     wiki_template = "wiki_base"
-    page_relative_path = str(content.relative_source_path).split("/")
+    page_relative_path = content.relative_source_path
+    split_page_relative_path = str(page_relative_path).split("/")
     mini_wiki_path = content.settings.get("MINI_WIKI_PATH", "")
-    for i in page_relative_path:
+    for i in split_page_relative_path:
         if i == mini_wiki_path:
-            logger.info(f"Setting template for {page_relative_path[-1]}")
+            logger.info(f"Setting template for {split_page_relative_path[-1]}")
             template_meta = content.metadata.get("template")
             if template_meta is not None:
                 content.template = template_meta
