@@ -16,14 +16,6 @@ def check_settings(pelican):
     else:
         logger.warning("Mini Wiki is DISABLED.")
 
-    # copy_wiki_templates()
-
-# def copy_wiki_templates():
-#     """
-#     If template files dont exist in the themes directory then
-#     copy them over.
-#     """
-#     print("HELLO WORLD")
 
 def set_wiki_template(generator, content):
     """
@@ -36,9 +28,9 @@ def set_wiki_template(generator, content):
     """
     wiki_template = "wiki_base"
     page_relative_path = str(content.relative_source_path).split("/")
-
+    mini_wiki_path = content.settings.get("MINI_WIKI_PATH", "")
     for i in page_relative_path:
-        if i == "wiki":
+        if i == mini_wiki_path:
             logger.info(f"Setting template for {page_relative_path[-1]}")
             template_meta = content.metadata.get("template")
             if template_meta is not None:
@@ -46,6 +38,7 @@ def set_wiki_template(generator, content):
             else:
                 content.template = wiki_template
             logger.info(f"Template has been changed to {content.template}")
+
 
 def register():
     """Register the plugin with Pelican"""
