@@ -26,7 +26,7 @@ Instructions coming soon. Configuration settings are available below.
 
 ...
 MINI_WIKI = True            # Required, enables the plugin.
-MINI_WIKI_PATH  ='wiki'     # Path to wiki files, relative to content directory.
+MINI_WIKI_PATH  ='wiki'     # Path to wiki files, relative to `content/pages/` directory.
 ...
 
 ```
