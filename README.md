@@ -25,8 +25,14 @@ Instructions coming soon. Configuration settings are available below.
 # pelicanconf.py
 
 ...
-MINI_WIKI = True            # Required, enables the plugin.
-MINI_WIKI_PATH  ='wiki'     # Path to wiki files, relative to `content/pages/` directory.
+# REQUIRED SETTINGS
+MINI_WIKI = True            # Enables the plugin.
+MINI_WIKI_PATH  ='wiki'     # Path to wiki files, relative to `content/` directory.
+# RECOMMENDED SETTINGS
+PAGE_PATHS = ['pages', MINI_WIKI_PATH]      # Sets paths to look in for `pages` type content.
+PATH_METADATA = '(?P<path_no_ext>.*)\..*'   # Strips the file extension from the `path` variable.
+PAGE_URL = '{path_no_ext}/'                 # Replaces the stripped file extension for the URL with a forward slash.
+PAGE_SAVE_AS = '{path_no_ext}.html'         # Replaces the stripped file extension for saving.
 ...
 
 ```
