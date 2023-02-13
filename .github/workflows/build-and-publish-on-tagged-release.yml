@@ -50,6 +50,6 @@ jobs:
           files: |
             README.md
             CONTRIBUTING.md
-            LICENSE.txt
+            LICENSE.md
             dist/*.tar.gz
             dist/*.whl
