@@ -4,7 +4,7 @@
 {% block content %}
     <article>
         <nav>
-            <p><a href="#">Navigation</a> &brvbar; <a href="#">About</a></p>
+            <p><a href="{{ SITEURL }}/pages/index.html">Wiki</a> &gt; <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></p>
         </nav>
         <h1><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h1>
         <p>Updated on: {{ page.locale_date }}</p>
