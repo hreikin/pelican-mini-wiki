@@ -1,0 +1,10 @@
+{% extends "page.html" %}
+{% block title %}&ndash; {{ page.title }}{% endblock %}
+
+{% block content %}
+    <article>
+        <h1><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h1>
+        <p>Updated on: {{ page.locale_date }}</p>
+        {{ page.content }}
+    </article>
+{% endblock %}
