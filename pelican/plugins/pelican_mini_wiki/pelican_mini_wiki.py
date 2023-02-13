@@ -25,9 +25,19 @@ def set_wiki_template(generator, content):
     will have the template meta attribute set to the `wiki_base.html`
     template unless it is already set in the meta to a different file.
     """
-    page_path = content.metadata.get('path')
-    logger.debug(page_path)
+    wiki_template = "wiki_base"
+    page_relative_path = str(content.relative_source_path).split("/")
+    print(str(content))
 
+    for i in page_relative_path:
+        if i == "wiki":
+            logger.info(f"Setting template for {page_relative_path[-1]}")
+            template_meta = content.metadata.get("template")
+            if template_meta is not None:
+                content.template = template_meta
+            else:
+                content.template = wiki_template
+            logger.info(f"Template has been changed to {content.template}")
 
 def register():
     """Register the plugin with Pelican"""
