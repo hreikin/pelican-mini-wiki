@@ -16,6 +16,15 @@ def check_settings(pelican):
     else:
         logger.warning("Mini Wiki is DISABLED.")
 
+    # copy_wiki_templates()
+
+# def copy_wiki_templates():
+#     """
+#     If template files dont exist in the themes directory then
+#     copy them over.
+#     """
+#     print("HELLO WORLD")
+
 def set_wiki_template(generator, content):
     """
     Ensure that `content` of a wiki page has a valid template attribute
