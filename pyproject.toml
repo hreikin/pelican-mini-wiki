@@ -34,4 +34,4 @@ classifiers = [
 where = ["pelican"]
 
 [tool.setuptools.package-data]
-"templates" = ["*.html"]
+templates = ["*.html"]
