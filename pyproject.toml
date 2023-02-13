@@ -31,7 +31,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/hreikin/pelican-mini-wiki/issues"
 
 [tool.setuptools.packages.find]
-where = ["pelican/themes/templates/simple"]
+where = ["pelican"]
 
 [tool.setuptools.package-data]
 templates = ["*.html"]
