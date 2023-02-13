@@ -19,7 +19,17 @@ This plugin can be installed via:
 Usage
 -----
 
-Instructions coming soon.
+Instructions coming soon. Configuration settings are available below.
+
+```python
+# pelicanconf.py
+
+...
+MINI_WIKI = True            # Required, enables the plugin.
+MINI_WIKI_PATH  ='wiki'     # Path to wiki files, relative to content directory.
+...
+
+```
 
 Contributing
 ------------
